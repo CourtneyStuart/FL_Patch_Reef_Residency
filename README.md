@@ -9,8 +9,8 @@ In this project, we investigated how habitat structure, biotic community composi
 
 Order of Analysis:
 1. *Create_Reef_Distance_Raster.R* - Creates a 'distance to reef' raster that will be used in conjunction with other spatial-environmental rasters developed in Stuart, C.E.; Wedding, L.M.; Pittman, S.J.; Green, S.J. (2021). Habitat suitability modeling to inform seascape connectivity conservation and management. Diversity, 13, 465. [https://doi.org/10.3390/d13100465](https://doi.org/10.3390/d13100465). 
-2. *Prepare_Patch_Reef_Data.py* - Utilizes ArcGIS Pro 3.1 and ArcPy to create and consolidate a suite of spatial-environmental predictors at patch reefs where fish surveys were conducted.
-3. *Add_Predators_Check_Multicollinearity.R* - Calculates the abundance and density of predators on patch reefs, incorporating these metrics alongside other predictors. This script performs correlation and multicollinearity checks using R and VIF, followed by cleaning and preparing training and testing data subsets.
+2. *Prepare_Patch_Reef_Data.py* - Utilizes ArcGIS Pro 3.1.0 and ArcPy to create and consolidate a suite of spatial-environmental predictors at patch reefs where fish surveys were conducted.
+3. *Add_Predators_Check_Multicollinearity.R* - Calculates the abundance and density of predators on patch reefs, and incorporates these metrics alongside other predictors. This script performs correlation and multicollinearity checks using Pearson correlation coefficients (r) and variance inflation factors (VIF), followed by cleaning and preparing the training and testing data subsets.
 4. *Count_Regressions.R* - Fits preliminary Poisson regressions to the training subsets, checks for overdispersion, and re-fits zero-inflated negative binomial regressions. It makes predictions on the testing subsets, calculates model fit and predictive accuracy metrics, and generates diagnostic plots.
 5. Bivariate_Plots.R - Plots the relationship between each biogeophysical predictor and the abundance of sub-adult gray snapper and bluestriped grunt on patch reefs.
 
